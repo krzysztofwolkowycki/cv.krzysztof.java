@@ -1,0 +1,155 @@
+body {
+    background-color: ghostwhite;
+    min-width: 960px;
+    font-family: 'Times New Roman', Times, serif;
+}
+#all {
+    width: 960px;
+    overflow: visible;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom:100px;
+    display: flex;
+    flex-flow: row wrap;
+    box-shadow: 30px 30px 100px;
+}
+header {
+    width: 100%;
+    border-bottom: 3px double darkgreen;
+    background-color: dodgerblue;
+    font-family: sans-serif;
+    color: white;
+}
+#head {
+    padding: 20px 5px 5px 50px;
+}
+#head2 {
+    padding: 0px 5px 5px 50px;
+}
+section.cv {
+    overflow: auto;
+    width: 620px;
+    background-color: aliceblue;
+    float: left;
+    display: block;
+}
+.data {
+    overflow: auto;
+    float: left;
+    display: block;
+}
+.company{
+    padding-left: .5em;
+}
+#opis{
+    padding-top: 20px;
+    padding-left: 2em;
+}
+.zakres {
+    font-size: medium;
+    padding-left: 1em;
+}
+.opiszakresu {
+    font-size: medium;
+    padding-left: 2em;
+}
+aside {
+    width: 340px;
+    background-color: gainsboro;
+    float: left;
+    display: block;
+}
+img.ja{
+    width:150px;
+    height:150px;
+    padding-left: 30px;
+}
+.box {
+    color: dodgerblue;
+    margin: 5px;
+    padding: 10px;
+    border-bottom: 1px solid black;
+    width: 300px;
+}
+p.tytulbox, address {
+    margin-left: 13px;
+}
+a[href^="mailto:"] {
+    color: black;
+   text-decoration: none;
+} 
+ul.kompetencje > li {
+    list-style: square;
+    margin-top: .2em;
+    margin-left: 13px;
+}
+ul > li {
+    list-style: none;
+    margin-top: .2em;
+    margin-left: 5px;
+}
+ul {
+    padding-left: 5px;
+}
+#sport {
+    padding-left: 15px;
+}
+form.formularz1 {
+    width: 960px;
+    text-align: center;
+    overflow: visible;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    display: block;
+    flex-flow: row wrap;
+}
+#kontakt{
+    padding-top: 20px;
+}
+input, select, textarea {
+    font-size: 105%;
+    color: black;
+    background-color: aliceblue;
+    border-radius: 5px;
+    padding: 5px 5px 5px 5px;
+    float: left;
+}
+button {
+    display: block;
+    padding: 15px 25px;
+    margin-top:10px;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: lightskyblue;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+button:hover {
+        background-color: forestgreen;
+}
+button:active {
+        background-color: forestgreen;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+}
+footer {
+    width: 960px;
+    text-align: center;
+    overflow: visible;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    display: block;
+    flex-flow: row wrap;
+}
+
+
