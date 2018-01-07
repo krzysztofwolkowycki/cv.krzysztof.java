@@ -20,6 +20,7 @@
             <h3 id="head2"></h3>
             <input type="button" value="Pokaż tożsamość" onclick="zaloguj()">
         </header>
+        
         <section class="cv">
             <article id="opis">
                 Jestem Kierownikiem działu elektro-mechanicznego w Hucie Szkła <q>Biaglass</q> Białystok. Pracę na stanowisku rozpoczołem stosunkowo niedawno. Wcześniej pracowałem na stanowisku Mistrza zmianowego w tym samym zakładzie produkcyjnym.
@@ -51,37 +52,21 @@
         </section>
         <aside class="bok">
             <figure id="ja">
-                <img id="zdjecie" scr="#" alt="Krzysztof" />
+                <img id="look" />
+                <br /><input type="button" id="przycisk" value="Pokaż zdjęcie" />
+                <input type="button" id="niema" value="Ukryj zdjęcie" />
             </figure>
-            <h2 class="box">Dane osobowe</h2>
+            <br /><h2 class="box">Dane osobowe</h2>
             <address>
-                <p class="tytulbox">Data urodzenia: 10.11.1990</p>
-                <p class="tytulbox">Białystok, ul. Puchatka</p>
-                <p class="tytulbox">Kom.: +48 799 221 990</p>
-                <p class="tytulbox">e-mail: <a href="mailto:wolkowycki.k@gmail.com">wolkowycki.k@gmail.com</a></p>
+                <input type="button" id="osobowe" value="Dane osobowe" />
             </address>
-            <h2 class="box">Kompetencje</h2>
-            <ul class="kompetencje">
-                <li>zarządzanie grupą 40 osób</li>
-                <li>prawo jazdy kat. B</li>
-                <li>ukończenie kursu „Akademia Kreatywnego Projektowania” – Solid Works</li>
-                <li>zdobycie certyfikatu SolidWorks Mechanical Design - Associate</li>
-                <li>obsługa pakietów Microsoft Office, SAP i Softlab ERP, Autodesk</li>
-                <li>ukończenie kursu Akademia Produkcji – Lean Manufacturing</li>
-                <li>
-                    Uprawnienia
-                    <div id="grupyupr">
-                        <table id="uprawnienia">
-                            <tr>
-                                <td>Elektryczne SEP - dozór do 15 kV </td>
-                                <td>Cieplne Grupa 2 - dozór </td>
-                                <td>Gazowe Grupa 3 - eksploatacja i dozór pow. 5kPa</td>
-                            </tr>
-                        </table>
-                    </div>
-                </li>
+            <br /><h2 class="box">Kompetencje</h2>
+            <ul id="komplist">
+
             </ul>
-            <h2 class="box">Hobby</h2>
+            <input id="kompetencje" type="button" value="Kompetencje" />
+
+            <br /><h2 class="box">Hobby</h2>
             <ul class="hobby">
                 <li>
                     sporty zespołowe m.in.:
