@@ -43,6 +43,7 @@ komp.onclick = function () {
     }
 }
 function budujTab(ar) {
+    var dok = document.getElementById("dosw");
     var table = document.createElement("table");
     document.body.appendChild(table);
 
@@ -58,19 +59,14 @@ function budujTab(ar) {
         cell = row.insertCell();
         cell.textContent = ar[i].zakres;
 
-        cell = row.insertCell();
-        cell.textContent = ar[i].login;
-
-        cell = row.insertCell();
-        cell.textContent = ar[i].admin;
     }
 
 }
 var dane = [
 
-    { okres: 50, zaklad: "Huta Szkla Biaglass Bialystok", zakres: "Nadzór nad prac¹ podleg³ego dzia³u; Utrzymanie ruchu zak³adu; Nadzór nad sprawnoœci¹ maszyn i urz¹dzeñ w procesie produkcji; Nadzór nad urz¹dzeniami dozorowymi; Nadzór nad infrastruktur¹ (budynki, sieci: energetyczne, gazowe, cieplne)." },
-    { okres: 50, zaklad: "Huta Szkla Biaglass Bialystok", zakres: "Nadzór nad prac¹ podleg³ego dzia³u; Utrzymanie ruchu zak³adu; Nadzór nad sprawnoœci¹ maszyn i urz¹dzeñ w procesie produkcji; Nadzór nad urz¹dzeniami dozorowymi; Nadzór nad infrastruktur¹ (budynki, sieci: energetyczne, gazowe, cieplne)." },
-    { okres: 50, zaklad: "Huta Szkla Biaglass Bialystok", zakres: "Nadzór nad prac¹ podleg³ego dzia³u; Utrzymanie ruchu zak³adu; Nadzór nad sprawnoœci¹ maszyn i urz¹dzeñ w procesie produkcji; Nadzór nad urz¹dzeniami dozorowymi; Nadzór nad infrastruktur¹ (budynki, sieci: energetyczne, gazowe, cieplne)." },
+    { okres: "02.01.2018 - obecnie", zaklad: "Huta Szkla Biaglass Bialystok", zakres: "Nadzor nad prac¹ podleglego dzialu; Utrzymanie ruchu zakladu; Nadzor nad sprawnoscia maszyn i urzadzen w procesie produkcji; Nadzor nad urzadzeniami dozorowymi; Nadzor nad infrastruktura (budynki, sieci: energetyczne, gazowe, cieplne)." },
+    { okres: "22.01.2014 - 29.12.2017", zaklad: "Huta Szkla Biaglass Bialystok", zakres: "Odpowiedzialnosc za realizacje planu produkcyjnego i biezace rozliczenie pracownikow z czasu pracy, organizacja pracy wydzialu i monitorowanie jego wynikow, ci¹gla wspolpraca z dzia³em kontroli jakosci, kierowanie i motywowanie 40 osobowej grupy pracownikow, wprowadzenie realizowanych zleceñ do systemu ERP." },
+    { okres: "02.01.2018 - obecnie", zaklad: "Huta Szkla Biaglass Bialystok", zakres: "Nadzór nad prac¹ podleg³ego dzia³u; Utrzymanie ruchu zak³adu; Nadzór nad sprawnoœci¹ maszyn i urz¹dzeñ w procesie produkcji; Nadzór nad urz¹dzeniami dozorowymi; Nadzór nad infrastruktur¹ (budynki, sieci: energetyczne, gazowe, cieplne)." },
     { id: 58, imie: "Asia", nazwisko: "Grzyb", login: "as", admin: false },
     { id: 63, imie: "Basia", nazwisko: "Bolek", login: "bol", admin: true },
     { id: 19, imie: "Szymon", nazwisko: "Lolek", login: "lol", admin: true },
