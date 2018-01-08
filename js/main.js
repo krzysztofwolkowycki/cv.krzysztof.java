@@ -42,3 +42,51 @@ komp.onclick = function () {
         el.appendChild(entery);
     }
 }
+function budujTab(ar) {
+    var table = document.createElement("table");
+    document.body.appendChild(table);
+
+    var row, cell;
+    for (i = 0; i < ar.length; ++i) {
+        row = table.insertRow();
+        cell = row.insertCell();
+        cell.textContent = ar[i].okres;
+
+        cell = row.insertCell();
+        cell.textContent = ar[i].zaklad;
+
+        cell = row.insertCell();
+        cell.textContent = ar[i].zakres;
+
+        cell = row.insertCell();
+        cell.textContent = ar[i].login;
+
+        cell = row.insertCell();
+        cell.textContent = ar[i].admin;
+    }
+
+}
+var dane = [
+
+    { okres: 50, zaklad: "Huta Szkla Biaglass Bialystok", zakres: "Nadzór nad prac¹ podleg³ego dzia³u; Utrzymanie ruchu zak³adu; Nadzór nad sprawnoœci¹ maszyn i urz¹dzeñ w procesie produkcji; Nadzór nad urz¹dzeniami dozorowymi; Nadzór nad infrastruktur¹ (budynki, sieci: energetyczne, gazowe, cieplne)." },
+    { okres: 50, zaklad: "Huta Szkla Biaglass Bialystok", zakres: "Nadzór nad prac¹ podleg³ego dzia³u; Utrzymanie ruchu zak³adu; Nadzór nad sprawnoœci¹ maszyn i urz¹dzeñ w procesie produkcji; Nadzór nad urz¹dzeniami dozorowymi; Nadzór nad infrastruktur¹ (budynki, sieci: energetyczne, gazowe, cieplne)." },
+    { okres: 50, zaklad: "Huta Szkla Biaglass Bialystok", zakres: "Nadzór nad prac¹ podleg³ego dzia³u; Utrzymanie ruchu zak³adu; Nadzór nad sprawnoœci¹ maszyn i urz¹dzeñ w procesie produkcji; Nadzór nad urz¹dzeniami dozorowymi; Nadzór nad infrastruktur¹ (budynki, sieci: energetyczne, gazowe, cieplne)." },
+    { id: 58, imie: "Asia", nazwisko: "Grzyb", login: "as", admin: false },
+    { id: 63, imie: "Basia", nazwisko: "Bolek", login: "bol", admin: true },
+    { id: 19, imie: "Szymon", nazwisko: "Lolek", login: "lol", admin: true },
+];
+budujTab(dane);
+
+document.getElementById("sortNazw").onclick = function () {
+    dane.sort(function (a, b) {
+        if (a.nazwisko < b.nazwisko) {
+            return -1;
+        }
+        if (a.nazwisko > b.nazwisko) {
+            return 1;
+        }
+        return 0;
+    });
+    document.body.removeChild(document.querySelector("table"));
+    budujTab(dane);
+}
