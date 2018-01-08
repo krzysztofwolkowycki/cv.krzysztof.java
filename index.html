@@ -23,10 +23,11 @@
         
         <section class="cv">
             <article id="opis">
-                Jestem Kierownikiem działu elektro-mechanicznego w Hucie Szkła <q>Biaglass</q> Białystok. Pracę na stanowisku rozpoczołem stosunkowo niedawno. Wcześniej pracowałem na stanowisku Mistrza zmianowego w tym samym zakładzie produkcyjnym.
+                Jestem Kierownikiem działu elektro-mechanicznego<span id="dane"> w Hucie Szkła <q>Biaglass</q> Białystok. Pracę na stanowisku rozpoczołem stosunkowo niedawno. Wcześniej pracowałem na stanowisku Mistrza zmianowego w tym samym zakładzie produkcyjnym.</span>
+            <p><input id="pokaz" type="button" value="Ukryj" /></p>
             </article>
             <article class="edu">
-                <h2 class="box">Edukacja</h2>
+               <h2 class="box">Edukacja</h2>
                 <h3 class="company">Wyższa Szkoła Finasów i Zarządzanie w Białymstoku – Zarządzanie Bezpieczeństwem i Higieną Pracy</h3>
                 <p class="zakres">2013-2014 Studia podyplomowe, zaoczne</p>
                 <h3 class="company">Politechnika Białostocka – Zarządzanie i Inżynieria Produkcji</h3>
@@ -36,20 +37,13 @@
             </article>
             <article class="doswiadczenie">
                 <h2 class="box">Doświadczenie</h2>
-                <h3 class="company">Huta Szkła "Biaglass" Białystok - Kierownik Działu Mechaniczno - Energetycznego</h3>
-                <p class="zakres">Zakres obowiązków:</p>
-                <p class="opiszakresu">Nadzór nad pracą podległego działu; Utrzymanie ruchu zakładu; Nadzór nad sprawnością maszyn i urządzeń w procesie produkcji; Nadzór nad urządzeniami dozorowymi; Nadzór nad infrastrukturą (budynki, sieci: energetyczne, gazowe, cieplne).</p>
-                <h3 class="company">Huta Szkła "Biaglass" Białystok - Mistrz Zmianowy</h3>
-                <p class="zakres">Zakres obowiązków:</p>
-                <p class="opiszakresu">Odpowiedzialność za realizację planu produkcyjnego i bieżące rozliczenie pracowników z czasu pracy, organizacja pracy wydziału i monitorowanie jego wyników, ciągła współpraca z działem kontroli jakości, kierowanie i motywowanie 40 osobowej grupy pracowników, wprowadzenie realizowanych zleceń do systemu ERP.</p>
-                <h3 class="company">Kompania Piwowarska, Browar Dojlidy – Aparatowy do rozlewu piwa</h3>
-                <p class="zakres">Zakres obowiązków:</p>
-                <p class="opiszakresu">Profesjonalna obsługa oraz konserwacja maszyn i urządzeń linii rozlewniczej, praca zgodnie z zasadami Lean Management.</p>
-                <h3 class="company">Altrad Poland – Pomocnik produkcji</h3>
-                <p class="zakres">Zakres obowiązków:</p>
-                <p class="opiszakresu">Przygotowywanie dokumentacji technicznej wykonanych wyrobów, skręcanie oraz pakowanie części maszyn budowlanych</p>
+                <p id="tabelka">
+
+                </p>
+                <p><input id="przyklad" type="button" value="Pokaż doświadczenie" /></p>
+                <p><input id="sortstan" type="button" value="Sortuj wg. Stanowisk" /></p>
             </article>
-        </section>
+</section>
         <aside class="bok">
             <figure id="ja">
                 <img id="look" />
@@ -83,7 +77,7 @@
 
     </div>
 
-    <form action="#" method="post" class="formularz1">
+    <form action="#" method="get" class="formularz1">
         <h3 id="kontakt">Chcesz się ze mną skontaktować? Wypełnij formualrz poniżej</h3>
         <table id="tab">
             <tr>

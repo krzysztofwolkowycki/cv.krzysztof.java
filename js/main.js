@@ -4,6 +4,18 @@ function zaloguj() {
     imie.innerHTML = "Krzysztof Wolkowycki";
     stanowisko.innerHTML = "Kierownik dzialu mechaniczno - elektrycznego";
 }
+var dn = document.getElementById("pokaz")
+var zawartosc = document.getElementById("dane");
+dn.onclick = function () {
+    if (zawartosc.hidden === true) {
+        zawartosc.hidden = false;
+        dn.value = "Ukryj";
+    }
+    else {
+        zawartosc.hidden = true;
+        dn.value = "Pokaz";
+    }
+}
 var zdjecie = document.getElementById("przycisk");
 var chowaj = document.getElementById("niema");
 zdjecie.onclick = function () {
@@ -42,8 +54,10 @@ komp.onclick = function () {
         el.appendChild(entery);
     }
 }
-function budujTab(ar) {
-    var dok = document.getElementById("dosw");
+/*
+var btn = document.getElementById("przyklad");
+
+btn.onclick = */function budujTab(ar) {
     var table = document.createElement("table");
     document.body.appendChild(table);
 
@@ -57,28 +71,27 @@ function budujTab(ar) {
         cell.textContent = ar[i].zaklad;
 
         cell = row.insertCell();
+        cell.textContent = ar[i].stanowisko;
+
+        cell = row.insertCell();
         cell.textContent = ar[i].zakres;
-
     }
-
 }
 var dane = [
-
-    { okres: "02.01.2018 - obecnie", zaklad: "Huta Szkla Biaglass Bialystok", zakres: "Nadzor nad prac¹ podleglego dzialu; Utrzymanie ruchu zakladu; Nadzor nad sprawnoscia maszyn i urzadzen w procesie produkcji; Nadzor nad urzadzeniami dozorowymi; Nadzor nad infrastruktura (budynki, sieci: energetyczne, gazowe, cieplne)." },
-    { okres: "22.01.2014 - 29.12.2017", zaklad: "Huta Szkla Biaglass Bialystok", zakres: "Odpowiedzialnosc za realizacje planu produkcyjnego i biezace rozliczenie pracownikow z czasu pracy, organizacja pracy wydzialu i monitorowanie jego wynikow, ci¹gla wspolpraca z dzia³em kontroli jakosci, kierowanie i motywowanie 40 osobowej grupy pracownikow, wprowadzenie realizowanych zleceñ do systemu ERP." },
-    { okres: "02.01.2018 - obecnie", zaklad: "Huta Szkla Biaglass Bialystok", zakres: "Nadzór nad prac¹ podleg³ego dzia³u; Utrzymanie ruchu zak³adu; Nadzór nad sprawnoœci¹ maszyn i urz¹dzeñ w procesie produkcji; Nadzór nad urz¹dzeniami dozorowymi; Nadzór nad infrastruktur¹ (budynki, sieci: energetyczne, gazowe, cieplne)." },
-    { id: 58, imie: "Asia", nazwisko: "Grzyb", login: "as", admin: false },
-    { id: 63, imie: "Basia", nazwisko: "Bolek", login: "bol", admin: true },
-    { id: 19, imie: "Szymon", nazwisko: "Lolek", login: "lol", admin: true },
+    { okres: "02.01.2018 - obecnie", zaklad: "Huta Szkla Biaglass Bialystok", stanowisko:"Kierownik Dzialu Mechaniczno - Energetycznego", zakres: "Nadzor nad praca podleglego dzialu; Utrzymanie ruchu zakladu; Nadzor nad sprawnoscia maszyn i urzadzen w procesie produkcji; Nadzor nad urzadzeniami dozorowymi; Nadzor nad infrastruktura (budynki, sieci: energetyczne, gazowe, cieplne)." },
+    { okres: "22.01.2014 - 29.12.2017", zaklad: "Huta Szkla Biaglass Bialystok", stanowisko: "Mistrz zmianowy", zakres: "Odpowiedzialnosc za realizacje planu produkcyjnego i biezace rozliczenie pracownikow z czasu pracy, organizacja pracy wydzialu i monitorowanie jego wynikow, ciagla wspolpraca z dzialem kontroli jakosci, kierowanie i motywowanie 40 osobowej grupy pracownikow, wprowadzenie realizowanych zlecen do systemu ERP." },
+    { okres: "01.06.2012 - 31.07.2012", zaklad: "Kompania Piwowarska, Browar Dojlidy", stanowisko: "Aparatowy do rozlewu piwa", zakres: "Profesjonalna obsluga oraz konserwacja maszyn i urzadzen linii rozlewniczej, praca zgodnie z zasadami Lean Management." },
+    { okres: "01.06.2009 - 30.09.2009", zaklad: "Altrad Poland", stanowisko: "Pomocnik produkcyjny", zakres: "Przygotowywanie dokumentacji technicznej wykonanych wyrobow, skrecanie oraz pakowanie czesci maszyn budowlanych" },
 ];
 budujTab(dane);
 
-document.getElementById("sortNazw").onclick = function () {
+
+document.getElementById("sortzak").onclick = function () {
     dane.sort(function (a, b) {
-        if (a.nazwisko < b.nazwisko) {
+        if (a.zaklad < b.zaklad) {
             return -1;
         }
-        if (a.nazwisko > b.nazwisko) {
+        if (a.zaklad > b.zaklad) {
             return 1;
         }
         return 0;
@@ -86,3 +99,47 @@ document.getElementById("sortNazw").onclick = function () {
     document.body.removeChild(document.querySelector("table"));
     budujTab(dane);
 }
+
+document.getElementById("sortstan").onclick = function () {
+    dane.sort(function (a, b) {
+        if (a.stanowisko < b.stanowisko) {
+            return -1;
+        }
+        if (a.stanowisko > b.stanowisko) {
+            return 1;
+        }
+        return 0;
+    });
+    document.body.removeChild(document.querySelector("table"));
+    budujTab(dane);
+}
+
+/*
+var dane = [
+    { okres: "02.01.2018 - obecnie", zaklad: "Huta Szkla Biaglass Bialystok", stanowisko: "Kierownik Dzialu Mechaniczno - Energetycznego", zakres: "Nadzor nad praca podleglego dzialu; Utrzymanie ruchu zakladu; Nadzor nad sprawnoscia maszyn i urzadzen w procesie produkcji; Nadzor nad urzadzeniami dozorowymi; Nadzor nad infrastruktura (budynki, sieci: energetyczne, gazowe, cieplne)." },
+    { okres: "22.01.2014 - 29.12.2017", zaklad: "Huta Szkla Biaglass Bialystok", stanowisko: "Mistrz zmianowy", zakres: "Odpowiedzialnosc za realizacje planu produkcyjnego i biezace rozliczenie pracownikow z czasu pracy, organizacja pracy wydzialu i monitorowanie jego wynikow, ciagla wspolpraca z dzialem kontroli jakosci, kierowanie i motywowanie 40 osobowej grupy pracownikow, wprowadzenie realizowanych zlecen do systemu ERP." },
+    { okres: "01.06.2012 - 31.07.2012", zaklad: "Kompania Piwowarska, Browar Dojlidy", stanowisko: "Aparatowy do rozlewu piwa", zakres: "Profesjonalna obsluga oraz konserwacja maszyn i urzadzen linii rozlewniczej, praca zgodnie z zasadami Lean Management." },
+    { okres: "01.06.2009 - 30.09.2009", zaklad: "Altrad Poland", stanowisko: "Pomocnik produkcyjny", zakres: "Przygotowywanie dokumentacji technicznej wykonanych wyrobow, skrecanie oraz pakowanie czesci maszyn budowlanych" },
+];
+var btn = document.getElementById("przyklad");
+btn.onclick = function (ar) {
+    var el = document.getElementById("tabelka");
+    var table = document.createElement("table");
+
+    var row = document.createElement("tr");
+    for (var i = 0; i < dane.length; i++) {
+        var col = document.createElement("td");
+        col.appendChild(document.createTextNode(dane[i]));
+        row.appendChild(col);
+    }
+    table.appendChild(row);
+    var row = document.createElement("tr");
+    for (i = 0; i < dane.length; i++) {
+        var col = document.createElement("td");
+        col.appendChild(document.createTextNode(dane[i]));
+        row.appendChild(col);
+    }
+    table.appendChild(row);
+    el.appendChild(table);
+}
+*/
