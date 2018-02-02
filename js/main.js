@@ -57,12 +57,14 @@ komp.onclick = function () {
 /*
 var btn = document.getElementById("przyklad");
 
-btn.onclick = */function budujTab(ar) {
+btn.onclick = */
+	var el1 = document.getElementById("tabledosw");
+	function budujTab(ar) {
     var table = document.createElement("table");
     document.body.appendChild(table);
-
+	el1.appendChild(table);
     var row, cell;
-    for (i = 0; i < ar.length; ++i) {
+    for (i = 0; i < dane.length; ++i) {
         row = table.insertRow();
         cell = row.insertCell();
         cell.textContent = ar[i].okres;
@@ -76,6 +78,7 @@ btn.onclick = */function budujTab(ar) {
         cell = row.insertCell();
         cell.textContent = ar[i].zakres;
     }
+	
 }
 var dane = [
     { okres: "02.01.2018 - obecnie", zaklad: "Huta Szkla Biaglass Bialystok", stanowisko:"Kierownik Dzialu Mechaniczno - Energetycznego", zakres: "Nadzor nad praca podleglego dzialu; Utrzymanie ruchu zakladu; Nadzor nad sprawnoscia maszyn i urzadzen w procesie produkcji; Nadzor nad urzadzeniami dozorowymi; Nadzor nad infrastruktura (budynki, sieci: energetyczne, gazowe, cieplne)." },
@@ -96,7 +99,7 @@ document.getElementById("sortzak").onclick = function () {
         }
         return 0;
     });
-    document.body.removeChild(document.querySelector("table"));
+    el1.removeChild(document.querySelector("table"));
     budujTab(dane);
 }
 
@@ -110,7 +113,7 @@ document.getElementById("sortstan").onclick = function () {
         }
         return 0;
     });
-    document.body.removeChild(document.querySelector("table"));
+    el1.removeChild(document.querySelector("table"));
     budujTab(dane);
 }
 
