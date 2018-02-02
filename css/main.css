@@ -151,3 +151,12 @@ footer {
     display: block;
     flex-flow: row wrap;
 }
+.java {
+    font-size: 105%;
+    color: black;
+    background-color: ghostwhite;
+    border-radius: 5px;
+    padding: 5px 5px 5px 5px;
+    display: flex;
+    float: none;
+}

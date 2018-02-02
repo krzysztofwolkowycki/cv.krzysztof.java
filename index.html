@@ -13,37 +13,32 @@
     <link rel="shortcut icon" href="/images/icon.png" type="image/png">
    
 </head>
-<body>
+<body onload="danemoje(); hobby()" >
     <div id="all">
         <header>
             <h1 id="head"></h1>
             <h3 id="head2"></h3>
-            <input type="button" value="Pokaż tożsamość" onclick="zaloguj()">
         </header>
         
         <section class="cv">
             <article id="opis">
-                Jestem Kierownikiem działu elektro-mechanicznego<span id="dane"> w Hucie Szkła <q>Biaglass</q> Białystok. Pracę na stanowisku rozpoczołem stosunkowo niedawno. Wcześniej pracowałem na stanowisku Mistrza zmianowego w tym samym zakładzie produkcyjnym.</span>
-            <p><input id="pokaz" type="button" value="Ukryj" /></p>
+                Jestem Kierownikiem działu elektro-mechanicznego<span id="dane" hidden=""> w Hucie Szkła <q>Biaglass</q> Białystok. Pracę na stanowisku rozpoczołem stosunkowo niedawno. Wcześniej pracowałem na stanowisku Mistrza zmianowego w tym samym zakładzie produkcyjnym.</span>
+                <p><input class="js" id="pokaz" type="button" value="Pokaz" /></p>
             </article>
             <article class="edu">
-               <h2 class="box">Edukacja</h2>
-                <h3 class="company">Wyższa Szkoła Finasów i Zarządzanie w Białymstoku – Zarządzanie Bezpieczeństwem i Higieną Pracy</h3>
-                <p class="zakres">2013-2014 Studia podyplomowe, zaoczne</p>
-                <h3 class="company">Politechnika Białostocka – Zarządzanie i Inżynieria Produkcji</h3>
-                <p class="zakres">2013-2014 Studia magisterskie, stacjonarne; Specjalizacja: Broker Technologii</p>
-                <h3 class="company">Politechnika Białostocka – Zarządzanie i Inżynieria Produkcji</h3>
-                <p class="zakres">2009-2013 Studia inżynierskie, stacjonarne</p>
+                <p><h2 class="box">Edukacja</h2></p>
+                <p id="tableedu"></p>
+
             </article>
             <article class="doswiadczenie">
                 <h2 class="box">Doświadczenie</h2>
                 <p id="tabledosw">
 
                 </p>
-                <p><input id="sortzak" type="button" value="Sortuj wg. Zakładu" /></p>
-                <p><input id="sortstan" type="button" value="Sortuj wg. Stanowisk" /></p>
+                <p><input class="js" id="sortzak" type="button" value="Sortuj wg. Zakładu" /></p>
+                <p><input class="js" id="sortstan" type="button" value="Sortuj wg. Stanowisk" /></p>
             </article>
-</section>
+        </section>
         <aside class="bok">
             <figure id="ja">
                 <img id="look" />
@@ -51,9 +46,9 @@
                 <input type="button" id="niema" value="Ukryj zdjęcie" />
             </figure>
             <br /><h2 class="box">Dane osobowe</h2>
-            <address>
-                <input type="button" id="osobowe" value="Dane osobowe" />
-            </address>
+            <ul id="me">
+
+            </ul>
             <br /><h2 class="box">Kompetencje</h2>
             <ul id="komplist">
 
@@ -61,17 +56,9 @@
             <input id="kompetencje" type="button" value="Kompetencje" />
 
             <br /><h2 class="box">Hobby</h2>
-            <ul class="hobby">
-                <li>
-                    sporty zespołowe m.in.:
-                    <ul id="sport">
-                        <li>piłka nożna</li>
-                        <li>siatkówka</li>
-                        <li>piłka ręczna</li>
+            <ul id="hobbyhtml">
+                    <ul id="sporthtml">
                     </ul>
-                </li>
-                <li>muzyka</li>
-                <li>nowinki technologiczne</li>
             </ul>
         </aside>
 
