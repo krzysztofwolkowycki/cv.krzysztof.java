@@ -216,3 +216,37 @@ var dane2 = [
     { okres: "2009-2013", szkola: "Politechnika Bialostocka - Zarzadzanie i Inzynieria Produkcji", rodzaj: "Studia inzynierskie, stacjonarne" },
 ];
 budujTab2(dane2);
+
+function getRVBN(n) {
+    var i, r = document.getElementsByName(n);
+    for (i = 0; i < r.length; i++) {
+        if (r[i].checked) return r[i].value;
+    }
+    return '';
+}
+
+function getValues() {
+    var g = getRVBN('gender');
+    alert(g);
+}
+document.querySelector('email').addEventListener('change', function () {
+    const emailAddress = 'errorField';
+    const mailReg = new RegExp('^[0-9a-z_.-]+@[0-9a-z.-]+\.[a-z]{2,3}$', 'i');
+
+    if (!mailReg.test(this.value)) {
+        this.classList.add(emailAddress); 
+    } else {
+        this.classList.remove(emailAddress);
+    }
+});
+document.querySelector('name').addEventListener('change', function () {
+    const tekst = 'error-field';
+    const reg = new RegExp('^[a-zA-Z]{3,}$', 'g');
+
+    if (!reg.test(this.value)) {
+        this.classList.add(tekst);
+    } else {
+        this.classList.remove(tekst);
+    }
+});
+console.log(document.querySelector('name'));

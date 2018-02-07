@@ -69,19 +69,19 @@
         <table id="tab">
             <tr>
                 <td align="right">Imię:</td>
-                <td align="right"><input type="text" name="Name" title="imię" placeholder="Imie" maxlength="15" /><br></td>
+                <td align="right"><input class="tekst" type="text" name="name" title="imię" placeholder="Imie" maxlength="15" /><br></td>
             </tr>
             <tr>
                 <td align="right">Nazwisko:</td>
-                <td align="right"><input type="text" name="Name" title="nazwisko" placeholder="Nazwisko" /><br></td>
+                <td align="right"><input class="tekst" type="text" name="name" title="nazwisko" placeholder="Nazwisko" /><br></td>
             </tr>
             <tr>
                 <td align="right">Adres e-mail:</td>
-                <td align="right"><input id="emailAddress" type="email" placeholder="cris@example.com"></td>
+                <td align="right"><input class="emailAddress" type="email" placeholder="cris@example.com"></td>
             </tr>
             <tr>
                 <td align="right">Płeć:</td>
-                <td><input type="radio" name="plec" value="K" title="kobieta" />Kobieta<br><input type="radio" name="plec" value="M" title="kobieta" />Mężczyzna<br></td>
+                <td><input type="radio" name="gender" value="K" title="kobieta" />Kobieta<br><input type="radio" name="gender" value="M" title="kobieta" />Mężczyzna<br></td>
                 <td></td>
             </tr>
             <tr>
@@ -108,7 +108,7 @@
         <button type="reset">
             Resetuj
         </button>
-        <button type="submit">
+        <button type="submit" onclick="getValues();">
             Prześlij formularz
         </button>
     </form>
